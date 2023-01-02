@@ -1,0 +1,6 @@
+.board {
+  width: 1000px;
+  height: 1000px;
+  background-color: rgb(198,154,81);
+  border: 1px solid black;
+}

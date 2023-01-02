@@ -1,6 +1,7 @@
 import React from 'react';
 import {useState} from 'react';
 import {initializeBoard} from '../helpers/BoardHelper';
+import '../styles/Board.css';
 
 
 
@@ -15,8 +16,7 @@ function Board() {
   const [board, setBoard] = useState(boardArr);
 
   return (
-    <div className= "Board">
-  
+    <div className= "board">
     </div>
   );
 }
