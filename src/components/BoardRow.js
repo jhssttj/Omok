@@ -1,19 +1,23 @@
 import React from 'react';
-import {renderSquare} from '../helpers/BoardHelper';
+import {BoardSquare} from './BoardSquare';
 import '../styles/Board.css';
 
-
-
 function BoardRow(props) {
-  //Carry over x and y value
+  //Carry over x value from props
   const x = props.x;
 
-  //Bring in function that renders x amount of squares 
-  const squares = renderSquare(x);
+  //Function to render x squares to form within a y row
+  const renderSquare = (x) => {
+    let squares = [];
+    for (let i=0; i<x; i++) {
+      squares.push(<BoardSquare/>)
+    }
+    return squares;
+  };
 
   return (
     <div className= "row">
-      {squares}
+      {renderSquare(x)}
     </div>
   );
 }

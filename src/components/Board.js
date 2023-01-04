@@ -14,6 +14,16 @@ function Board() {
   //Initalize Board Array
   const boardArr = initializeBoard(x,y);
 
+ //Function to render y rows to form within on the board
+ const renderRows = (x) => {
+  let squares = [];
+  for (let i=0; i<x; i++) {
+    squares.push(<div className = "square"></div>)
+  }
+  return squares;
+}
+
+
   //Set Board To Empty Array 
   const [board, setBoard] = useState(boardArr);
 

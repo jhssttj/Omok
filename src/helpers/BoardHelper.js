@@ -11,16 +11,6 @@ const initializeBoard = (x,y) => {
   return array;
 };
 
-//Function to render x squares to form within a y row
-const renderSquare = (x) => {
-  let squares = [];
-  for (let i=0; i<x; i++) {
-    squares.push(<div className = "square"></div>)
-  }
-  return squares;
-}
-
 export {
   initializeBoard,
-  renderSquare
 }
