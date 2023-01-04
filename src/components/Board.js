@@ -15,12 +15,12 @@ function Board() {
   const boardArr = initializeBoard(x,y);
 
  //Function to render y rows to form within on the board
- const renderRows = (x) => {
-  let squares = [];
-  for (let i=0; i<x; i++) {
-    squares.push(<div className = "square"></div>)
+ const renderRows = (y) => {
+  let rows = [];
+  for (let i=0; i<y; i++) {
+    rows.push(<BoardRow x={x}/>)
   }
-  return squares;
+  return rows;
 }
 
 
@@ -30,7 +30,7 @@ function Board() {
 
   return (
     <div className= "board">
-      <BoardRow x={x}/>
+      {renderRows(y)}
     </div>
   );
 }
