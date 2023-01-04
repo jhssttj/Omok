@@ -20,7 +20,7 @@ function Board() {
 
   return (
     <div className= "board">
-      {BoardRow}
+      <BoardRow x={x}/>
     </div>
   );
 }

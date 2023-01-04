@@ -18,4 +18,4 @@ function BoardRow(props) {
   );
 }
 
-export default BoardRow;
+export {BoardRow};

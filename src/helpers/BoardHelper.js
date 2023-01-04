@@ -15,7 +15,7 @@ const initializeBoard = (x,y) => {
 const renderSquare = (x) => {
   let squares = [];
   for (let i=0; i<x; i++) {
-    squares.push(<div className = "square">hi</div>)
+    squares.push(<div className = "square"></div>)
   }
   return squares;
 }
