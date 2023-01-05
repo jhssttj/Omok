@@ -3,8 +3,10 @@ import '../styles/Board.css';
 
 function BoardSquare(props) {
 
+  const className = props.className
+
   return (
-    <div className = "square"></div>
+    <div className = {className}></div>
   );
 }
 

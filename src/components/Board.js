@@ -18,7 +18,7 @@ function Board() {
  const renderRows = (y) => {
   let rows = [];
   for (let i=0; i<y; i++) {
-    rows.push(<BoardRow x={x}/>)
+    rows.push(<BoardRow x={x} y={y} rowValue={i}/>)
   }
   return rows;
 }
