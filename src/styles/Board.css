@@ -26,7 +26,7 @@
   content:"";
   height: 100%;
   width:2px;
-  background:cyan;
+  background:yellowgreen;
   position: absolute;
   top: 0%;
   right: 50%;
@@ -37,11 +37,13 @@
   content:"";
   height: 2px;
   width:100%;
-  background:yellowgreen;
+  background:cyan;
   position: absolute;
   top: 50%;
   right: 0;
   transform: translateY(50%);
 }
 
-
+.bot:before {
+  height: 50%;
+}

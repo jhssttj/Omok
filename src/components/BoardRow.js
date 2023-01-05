@@ -13,11 +13,18 @@ function BoardRow(props) {
     let squares = [];
     for (let i=0; i<x; i++) {
       let className = "square"
-      if (rowValue === 0 || rowValue === y-1) {
-        className += " rowEdge";
+      //Determine if square is at edge of the board
+      if (rowValue === 0) {
+        className += " top";
       } 
-      if (i === 0 || i === x-1) {
-        className += " colEdge";
+      if (rowValue === y-1) {
+        className += " bot";
+      }
+      if (i === 0) {
+        className += " left";
+      }
+      if (i === x-1) {
+        className += " right";
       }
       squares.push(<BoardSquare className={className}/>);
     }
