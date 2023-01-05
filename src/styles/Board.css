@@ -15,8 +15,8 @@
 }
 
 .square {
-  width: 60px;
-  height: 60px;
+  width: 55px;
+  height: 55px;
   background-color: rgb(198,154,81);
   position: relative;
 
@@ -26,7 +26,7 @@
   content:"";
   height: 100%;
   width:2px;
-  background:yellowgreen;
+  background:black;
   position: absolute;
   top: 0%;
   right: 50%;
@@ -37,13 +37,25 @@
   content:"";
   height: 2px;
   width:100%;
-  background:cyan;
+  background:black;
   position: absolute;
   top: 50%;
   right: 0;
   transform: translateY(50%);
 }
 
+.top:before {
+  top: 50%;
+}
+
 .bot:before {
   height: 50%;
+}
+
+.left:after {
+  left: 50%;
+}
+
+.right:after {
+  right: 50%;
 }
