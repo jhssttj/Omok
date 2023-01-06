@@ -5,9 +5,10 @@ import {placeStone} from '../helpers/BoardHelper';
 function BoardSquare(props) {
   
   const className = props.className;
-  const value = props.value;
+  const x = props.x;
+  const y = props.y;
   return (
-    <div className={className} value={value} onClick={placeStone}></div>
+    <div className={className} x={x} y={y} onClick={placeStone}></div>
   );
 }
 

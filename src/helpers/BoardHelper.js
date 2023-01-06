@@ -13,8 +13,9 @@ const initializeBoard = (x,y) => {
 
 const placeStone = (event) => {
   event.preventDefault();
-  console.log(event.target.getAttribute("value"));
-  console.log(typeof(event.target.getAttribute("value")));
+  console.log(event.target.getAttribute("x"));
+  console.log(event.target.getAttribute("y"));
+  console.log(typeof(event.target.getAttribute("x")));
 }
 
 export {

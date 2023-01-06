@@ -26,7 +26,7 @@ function BoardRow(props) {
       if (i === x-1) {
         className += " right";
       }
-      squares.push(<BoardSquare className={className} value={i} key={i}/>);
+      squares.push(<BoardSquare className={className} x={i} y={value} key={i}/>);
     }
     return squares;
   };

@@ -1,6 +1,6 @@
 import React from 'react';
 import {useState} from 'react';
-import {x,y,boardArr} from '../backend/Board';
+import {x,y,boardArr} from '../backend/BoardData';
 import {BoardRow} from './BoardRow';
 import '../styles/Board.css';
 
