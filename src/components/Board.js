@@ -1,6 +1,6 @@
 import React from 'react';
 import {useState} from 'react';
-import {rowLength,colLength,boardArr} from '../backend/BoardData';
+import {colLength,boardArr} from '../backend/BoardData';
 import {BoardRow} from './BoardRow';
 import '../styles/Board.css';
 
@@ -12,7 +12,7 @@ function Board() {
  const renderRows = (colLength) => {
   let rows = [];
   for (let i=0; i<colLength; i++) {
-    rows.push(<BoardRow rowValue={i} key={i}/>)
+    rows.push(<BoardRow value={i} key={i}/>)
   }
   return rows;
 }
