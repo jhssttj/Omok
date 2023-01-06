@@ -1,6 +1,6 @@
 import React from 'react';
 import {useState} from 'react';
-import {x,y,boardArr} from '../backend/BoardData';
+import {rowLength,colLength,boardArr} from '../backend/BoardData';
 import {BoardRow} from './BoardRow';
 import '../styles/Board.css';
 
@@ -9,10 +9,10 @@ import '../styles/Board.css';
 function Board() {
 
  //Function to render y rows to form within on the board
- const renderRows = (y) => {
+ const renderRows = (colLength) => {
   let rows = [];
-  for (let i=0; i<y; i++) {
-    rows.push(<BoardRow x={x} y={y} value={i} key={i}/>)
+  for (let i=0; i<colLength; i++) {
+    rows.push(<BoardRow rowValue={i} key={i}/>)
   }
   return rows;
 }
@@ -22,7 +22,7 @@ function Board() {
 
   return (
     <div className= "board">
-      {renderRows(y)}
+      {renderRows(colLength)}
     </div>
   );
 }
