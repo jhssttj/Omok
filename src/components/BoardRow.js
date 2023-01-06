@@ -6,7 +6,7 @@ function BoardRow(props) {
   //Carry over x and row position value from props
   const x = props.x;
   const y = props.y;
-  const rowValue = props.rowValue;
+  const value = props.value;
 
   //Function to render x squares to form within a y row
   const renderSquare = (x) => {
@@ -14,10 +14,10 @@ function BoardRow(props) {
     for (let i=0; i<x; i++) {
       let className = "square"
       //Determine if square is at edge of the board
-      if (rowValue === 0) {
+      if (value === 0) {
         className += " top";
       } 
-      if (rowValue === y-1) {
+      if (value === y-1) {
         className += " bot";
       }
       if (i === 0) {
@@ -26,13 +26,13 @@ function BoardRow(props) {
       if (i === x-1) {
         className += " right";
       }
-      squares.push(<BoardSquare className={className} key={i}/>);
+      squares.push(<BoardSquare className={className} value={i} key={i}/>);
     }
     return squares;
   };
 
   return (
-    <div className= "row">
+    <div className= "row" value={value}>
       {renderSquare(x)}
     </div>
   );
