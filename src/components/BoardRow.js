@@ -4,6 +4,7 @@ import {rowLength,colLength} from '../backend/BoardData';
 import '../styles/Board.css';
 
 function BoardRow(props) {
+  
   //Carry over current row value from props
   const value = props.value;
 

@@ -11,6 +11,7 @@ const initializeBoard = (x,y) => {
   return array;
 };
 
+//Function to update board Array when stone is placed
 const placeStone = (event) => {
   event.preventDefault();
   console.log(event.target.getAttribute("x"));

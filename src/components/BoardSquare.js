@@ -4,9 +4,11 @@ import {placeStone} from '../helpers/BoardHelper';
 
 function BoardSquare(props) {
   
+  //Carry over values from props
   const className = props.className;
   const x = props.x;
   const y = props.y;
+  
   return (
     <div className={className} x={x} y={y} onClick={placeStone}></div>
   );
