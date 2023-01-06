@@ -8,8 +8,8 @@ import '../styles/Board.css';
 
 function Board() {
   //Intialize Board X and Y Size (Played on 15x15)
-  const x = 15;
-  const y = 15;
+  const x = 19;
+  const y = 19;
 
   //Initalize Board Array
   const boardArr = initializeBoard(x,y);
