@@ -13,20 +13,17 @@ function Board() {
   //Set Current Player Turn
   const [player, setPlayer] = useState(1);
   //Declare if square is empty or have a stone
-  const [piece, setPiece] = useState("");
 
   const placeStone = (event) => {
-    console.log(event.target.getAttribute("x"));
-    console.log(event.target.getAttribute("y"));
+    //Get current square x and y coordinates
     const x = event.target.getAttribute("x");
     const y = event.target.getAttribute("y");
-    console.log("Current player turn", player);
 
     //Update board
     setBoard((prev) => {
-      return[...prev, updateBoard(board, player, x, y)]
+      return[...prev, updateBoard(board,player,x,y)]
     })
-    console.log(board);
+
     //Set to next player after move has been made.
     if (player === 1) {
       setPlayer(2);
@@ -41,7 +38,7 @@ function Board() {
  const renderRows = (colLength) => {
   let rows = [];
   for (let i=0; i<colLength; i++) {
-    rows.push(<BoardRow value={i} key={i} placeStone={placeStone} piece={piece}/>)
+    rows.push(<BoardRow value={i} key={i} placeStone={placeStone} board={board}/>)
   }
   return rows;
 }
