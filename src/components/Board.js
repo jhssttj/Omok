@@ -12,7 +12,6 @@ function Board() {
   const [board, setBoard] = useState(boardArr);
   //Set Current Player Turn
   const [player, setPlayer] = useState(1);
-  //Declare if square is empty or have a stone
 
   const placeStone = (event) => {
     //Get current square x and y coordinates
@@ -32,7 +31,6 @@ function Board() {
     }
   };
   
-
 
  //Function to render y rows to form within on the board
  const renderRows = (colLength) => {
