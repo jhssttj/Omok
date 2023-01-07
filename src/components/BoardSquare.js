@@ -8,9 +8,12 @@ function BoardSquare(props) {
   const className = props.className;
   const x = props.x;
   const y = props.y;
+  const val = props.val
   
   return (
-    <div className={className} x={x} y={y} onClick={placeStone}></div>
+    <div className={className} val={val} x={x} y={y} onClick={placeStone}>
+      {val}
+    </div>
   );
 }
 
