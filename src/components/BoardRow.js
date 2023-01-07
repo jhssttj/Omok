@@ -33,7 +33,7 @@ function BoardRow(props) {
   };
 
   return (
-    <div className= "row" value={value}>
+    <div className= "row">
       {renderSquare(rowLength)}
     </div>
   );

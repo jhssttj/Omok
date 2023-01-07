@@ -12,15 +12,12 @@ const initializeBoard = (x,y) => {
 };
 
 //Function to update board Array when stone is placed
-const placeStone = (event) => {
-  event.preventDefault();
-  console.log(event.target.getAttribute("x"));
-  console.log(event.target.getAttribute("y"));
-  console.log(typeof(event.target.getAttribute("x")));
-
+const updateBoard = (board,player,x,y) => {
+  board[y][x] = player;
+  return board;
 }
 
 export {
   initializeBoard,
-  placeStone
+  updateBoard
 }
