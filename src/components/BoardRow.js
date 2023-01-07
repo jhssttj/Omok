@@ -7,6 +7,7 @@ function BoardRow(props) {
   
   //Carry over current row value from props
   const value = props.value;
+  const placeStone = props.placeStone;
 
   //Function to render x squares to form within a y row
   const renderSquare = (rowLength) => {
@@ -26,7 +27,7 @@ function BoardRow(props) {
       if (i === rowLength-1) {
         className += " right";
       }
-      squares.push(<BoardSquare className={className} x={i} y={value} key={i}/>);
+      squares.push(<BoardSquare className={className} x={i} y={value} key={i} placeStone={placeStone}/>);
     }
     return squares;
   };
