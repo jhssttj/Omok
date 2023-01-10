@@ -1,5 +1,7 @@
 import React from 'react';
 import '../styles/Board.css';
+import piece1 from '../images/piece-black.png'
+import piece2 from '../images/piece-white.png'
 
 function BoardSquare(props) {
   //Carry over values from props
@@ -12,10 +14,10 @@ function BoardSquare(props) {
   return (
     <div className={className} x={x} y={y} onClick={(event)=>{placeStone(event)}}>
       {board[y][x] === 1 &&
-        <h1>P1</h1>
+        <img src={piece1} alt='p1' className='p1piece'/>
       }
       {board[y][x] === 2 &&
-        <h1>P2</h1>
+        <img src={piece2} alt='p2' className='p2piece'/>
       }
     </div>
   );

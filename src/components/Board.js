@@ -14,6 +14,7 @@ function Board() {
   const [player, setPlayer] = useState(1);
 
   const placeStone = (event) => {
+    event.preventDefault();
     //Get current square x and y coordinates
     const x = event.target.getAttribute("x");
     const y = event.target.getAttribute("y");
