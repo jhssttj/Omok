@@ -14,12 +14,13 @@ function Board() {
   const [player, setPlayer] = useState(1);
 
   const placeStone = (event) => {
+
     event.preventDefault();
+    
     //Get current square x and y coordinates
     const x = event.target.getAttribute("x");
     const y = event.target.getAttribute("y");
-    console.log (x,y)
-    console.log(event.target.getAttribute("alt"))
+
     //Update board
     setBoard((prev) => {
       return[...prev, updateBoard(board,player,x,y)]

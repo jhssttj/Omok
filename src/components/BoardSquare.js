@@ -10,13 +10,14 @@ function BoardSquare(props) {
   const y = props.y;
   const placeStone = props.placeStone;
   const board = props.board;
-  
+  //Find if piece has already been placed or not and disable onclick if so
+  const placed = board[y][x] !== "";
   return (
     <div 
     className={className} 
     x={x} 
     y={y} 
-    onClick={board[y][x] !==""?()=>{}:(event)=>{placeStone(event)}}>
+    onClick={placed? ()=>{} : (event)=>{placeStone(event)}}>
       {board[y][x] === 1 &&
         <img src={piece1} alt='p1' className='p1 stone'/>
       }
