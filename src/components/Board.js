@@ -1,5 +1,5 @@
 import React from 'react';
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import {colLength,boardArr} from '../backend/BoardData';
 import {updateBoard} from '../helpers/BoardHelper';
 import {BoardRow} from './BoardRow';
@@ -18,7 +18,8 @@ function Board() {
     //Get current square x and y coordinates
     const x = event.target.getAttribute("x");
     const y = event.target.getAttribute("y");
-
+    console.log (x,y)
+    console.log(event.target.getAttribute("alt"))
     //Update board
     setBoard((prev) => {
       return[...prev, updateBoard(board,player,x,y)]

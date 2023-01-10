@@ -12,12 +12,16 @@ function BoardSquare(props) {
   const board = props.board;
   
   return (
-    <div className={className} x={x} y={y} onClick={(event)=>{placeStone(event)}}>
+    <div 
+    className={className} 
+    x={x} 
+    y={y} 
+    onClick={board[y][x] !==""?()=>{}:(event)=>{placeStone(event)}}>
       {board[y][x] === 1 &&
-        <img src={piece1} alt='p1' className='p1piece'/>
+        <img src={piece1} alt='p1' className='p1 stone'/>
       }
       {board[y][x] === 2 &&
-        <img src={piece2} alt='p2' className='p2piece'/>
+        <img src={piece2} alt='p2' className='p2 stone'/>
       }
     </div>
   );

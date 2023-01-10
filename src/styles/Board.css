@@ -59,3 +59,8 @@
 .right:after {
   right: 50%;
 }
+
+.stone {
+  width:100%;
+  height:100%;
+}

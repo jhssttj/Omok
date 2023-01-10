@@ -17,7 +17,7 @@ const updateBoard = (board,player,x,y) => {
     board[y][x] = player;
     return board;
   }
-  return;
+  return board[y][x];
 }
 
 export {
