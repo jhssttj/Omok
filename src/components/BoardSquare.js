@@ -1,5 +1,4 @@
 import React from 'react';
-import {useState} from 'react';
 import '../styles/Board.css';
 
 function BoardSquare(props) {
@@ -12,7 +11,12 @@ function BoardSquare(props) {
   
   return (
     <div className={className} x={x} y={y} onClick={(event)=>{placeStone(event)}}>
-      {board[y][x]}
+      {board[y][x] === 1 &&
+        <h1>P1</h1>
+      }
+      {board[y][x] === 2 &&
+        <h1>P2</h1>
+      }
     </div>
   );
 }
