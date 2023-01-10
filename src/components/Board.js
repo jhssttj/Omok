@@ -4,6 +4,8 @@ import {colLength,boardArr} from '../backend/BoardData';
 import {updateBoard} from '../helpers/BoardHelper';
 import {BoardRow} from './BoardRow';
 import '../styles/Board.css';
+import piece1 from '../images/piece-black.png';
+import piece2 from '../images/piece-white.png';
 
 
 
@@ -12,6 +14,11 @@ function Board() {
   const [board, setBoard] = useState(boardArr);
   //Set Current Player Turn
   const [player, setPlayer] = useState(1);
+  //Set Players Piece
+  const piece = {
+    p1: piece1,
+    p2: piece2
+  };
 
   const placeStone = (event) => {
 
@@ -20,7 +27,7 @@ function Board() {
     //Get current square x and y coordinates
     const x = event.target.getAttribute("x");
     const y = event.target.getAttribute("y");
-    
+
     //Update board
     setBoard((prev) => {
       return[...prev, updateBoard(board,player,x,y)]
@@ -32,8 +39,6 @@ function Board() {
     } else {
       setPlayer(1);
     }
-
-    event.stopPropagation();
   };
   
 
@@ -41,7 +46,7 @@ function Board() {
  const renderRows = (colLength) => {
   let rows = [];
   for (let i=0; i<colLength; i++) {
-    rows.push(<BoardRow value={i} key={i} placeStone={placeStone} board={board}/>)
+    rows.push(<BoardRow value={i} key={i} placeStone={placeStone} board={board} piece={piece} player={player}/>)
   }
   return rows;
 }

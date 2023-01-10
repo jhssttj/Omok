@@ -2,8 +2,6 @@ import React from 'react';
 import {useState} from 'react';
 import {BoardStone} from './BoardStone';
 import '../styles/Board.css';
-import piece1 from '../images/piece-black.png'
-import piece2 from '../images/piece-white.png'
 
 function BoardSquare(props) {
   //Carry over values from props
@@ -12,8 +10,10 @@ function BoardSquare(props) {
   const y = props.y;
   const placeStone = props.placeStone;
   const board = props.board;
+  const piece = props.piece
+  const player = props.player;
   //Find if piece has already been placed or not and disable onclick if so
-  const placed = board[y][x] !== "";
+  const placed = (board[y][x] !== "");
   //Set hover state to render pre-placed stone location
   const [hover, setHover] = useState(false);
 
@@ -26,15 +26,18 @@ function BoardSquare(props) {
     onMouseEnter={()=>setHover(true)}
     onMouseLeave={()=>setHover(false)}
     >
-      {hover &&
-        <BoardStone img={piece1} x={x} y={y} className='stone hover'/>
+      {(hover && player === 1) &&
+        <BoardStone img={piece.p1} x={x} y={y} className='stone hover'/>
+      }
+      {(hover && player === 2) &&
+        <BoardStone img={piece.p2} x={x} y={y} className='stone hover'/>
       }
 
       {board[y][x] === 1 &&
-        <BoardStone img={piece1} className='stone'/>
+        <BoardStone img={piece.p1} className='stone'/>
       }
       {board[y][x] === 2 &&
-        <BoardStone img={piece2} className='stone'/>
+        <BoardStone img={piece.p2} className='stone'/>
       }
     </div>
   );

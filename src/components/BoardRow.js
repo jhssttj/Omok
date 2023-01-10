@@ -9,6 +9,8 @@ function BoardRow(props) {
   const value = props.value;
   const placeStone = props.placeStone;
   const board = props.board;
+  const piece = props.piece;
+  const player = props.player;
 
   //Function to render x squares to form within a y row
   const renderSquare = (rowLength) => {
@@ -28,7 +30,7 @@ function BoardRow(props) {
       if (i === rowLength-1) {
         className += " right";
       }
-      squares.push(<BoardSquare className={className} x={i} y={value} key={i} placeStone={placeStone} board={board}/>);
+      squares.push(<BoardSquare className={className} x={i} y={value} key={i} piece={piece} placeStone={placeStone} board={board} player={player}/>);
     }
     return squares;
   };
