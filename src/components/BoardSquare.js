@@ -1,5 +1,6 @@
 import React from 'react';
 import {useState} from 'react';
+import {BoardStone} from './BoardStone';
 import '../styles/Board.css';
 import piece1 from '../images/piece-black.png'
 import piece2 from '../images/piece-white.png'
@@ -15,17 +16,7 @@ function BoardSquare(props) {
   const placed = board[y][x] !== "";
   //Set hover state to render pre-placed stone location
   const [hover, setHover] = useState(false);
-  //Function to check hover
-  const isHover = () => {
-    if (hover) {
-      setHover(false);
-      console.log("Hover off");
-      return;
-    }
-    setHover(true);
-    console.log("Hover on");
-    return;
-  }
+
   return (
     <div 
     className={className} 
@@ -35,12 +26,15 @@ function BoardSquare(props) {
     onMouseEnter={()=>setHover(true)}
     onMouseLeave={()=>setHover(false)}
     >
-      {hover && <h1>hovered</h1>}
+      {hover &&
+        <BoardStone img={piece1} x={x} y={y} className='stone hover'/>
+      }
+
       {board[y][x] === 1 &&
-        <img src={piece1} alt='p1' className='p1 stone'/>
+        <BoardStone img={piece1} className='stone'/>
       }
       {board[y][x] === 2 &&
-        <img src={piece2} alt='p2' className='p2 stone'/>
+        <BoardStone img={piece2} className='stone'/>
       }
     </div>
   );

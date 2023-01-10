@@ -20,7 +20,7 @@ function Board() {
     //Get current square x and y coordinates
     const x = event.target.getAttribute("x");
     const y = event.target.getAttribute("y");
-
+    
     //Update board
     setBoard((prev) => {
       return[...prev, updateBoard(board,player,x,y)]
@@ -32,6 +32,8 @@ function Board() {
     } else {
       setPlayer(1);
     }
+
+    event.stopPropagation();
   };
   
 
