@@ -66,3 +66,8 @@
   position:absolute;
   z-index:1;
 }
+
+.hover {
+  opacity:0.5;
+  cursor: pointer;
+}
