@@ -21,8 +21,18 @@ const updateBoard = (board,player,x,y) => {
 }
 
 //Function to check if a win condition has been found
-const checkBoard = () => {
-  console.log("Checked");
+const checkBoard = (board) => {
+  for (let i=0;i<board.length;i++) {
+    for (let j=0;j<board[i].length;j++) {
+      console.log('we')
+    }
+  }
+}
+
+//Function check if 5 rows match in the array
+const checkRow = (coord) => {
+  
+  
 }
 
 export {

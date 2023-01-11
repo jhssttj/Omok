@@ -21,10 +21,9 @@ function Board() {
   };
 
   //Check if a win condition has been rendered
-  useEffect(()=>{
-    checkBoard();
+  useEffect(() => {
+    checkBoard(board)
   }
-    
     ,[board])
 
   const placeStone = (event) => {
