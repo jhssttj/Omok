@@ -20,7 +20,13 @@ const updateBoard = (board,player,x,y) => {
   return board[y][x];
 }
 
+//Function to check if a win condition has been found
+const checkBoard = () => {
+  console.log("Checked");
+}
+
 export {
   initializeBoard,
-  updateBoard
+  updateBoard,
+  checkBoard
 }
