@@ -17,21 +17,20 @@ const updateBoard = (board,player,x,y) => {
     board[y][x] = player;
     return board;
   }
-  return board[y][x];
 }
 
 //Function to check if a win condition has been found
 const checkBoard = (board) => {
+  console.log(board)
   for (let i=0;i<board.length;i++) {
-    for (let j=0;j<board[i].length;j++) {
-      console.log('we')
-    }
+ 
   }
+  return false;
 }
 
 //Function check if 5 rows match in the array
-const checkRow = (coord) => {
-  
+const checkRow = (board,x,y) => {
+  console.log(board[x][y])
   
 }
 
