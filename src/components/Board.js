@@ -22,7 +22,8 @@ function Board() {
 
   //Check if a win condition has been rendered
   useEffect(() => {
-    checkBoard(board)
+    // checkBoard(board)
+    console.log("trig")
   }
     ,[board])
 
@@ -38,7 +39,7 @@ function Board() {
     setBoard(() => {
       return updateBoard(board,player,x,y)
     })
-
+    
     //Set to next player after move has been made.
     if (player === 1) {
       setPlayer(2);
