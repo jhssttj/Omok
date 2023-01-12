@@ -21,10 +21,10 @@ function Board() {
   };
 
   //Check if a win condition has been rendered
-  // useEffect(() => {
-  //   checkBoard(board)
-  // }
-  //   ,[board])
+  useEffect(() => {
+    checkBoard(board)
+  }
+    ,[board])
 
   const placeStone = (event) => {
 
@@ -38,7 +38,7 @@ function Board() {
     setBoard(() => {
       return updateBoard(board,player,x,y)
     })
-    console.log(board);
+
     //Set to next player after move has been made.
     if (player === 1) {
       setPlayer(2);
