@@ -22,10 +22,9 @@ function Board() {
 
   //Check if a win condition has been rendered
   useEffect(() => {
-    // checkBoard(board)
-    console.log("trig")
+    checkBoard(board)
   }
-    ,[board])
+  ,[board])
 
   const placeStone = (event) => {
 

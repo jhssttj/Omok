@@ -24,8 +24,7 @@ const updateBoard = (board,player,x,y) => {
 const checkBoard = (board) => {
   for (let i=0;i<board.length;i++) {
     for (let j=0;j<board.length;j++) {
-      console.log("rest",board[i][j]);
-      // checkRow(board,i,j);
+      
     }
   }
   return false;
