@@ -13,7 +13,7 @@ function Board() {
   //Set Board To Empty Array 
   const [board, setBoard] = useState(boardArr);
   //Set Current Player Turn
-  const [player, setPlayer] = useState(1);
+  const [player, setPlayer] = useState(2);
   //Set Players Piece
   const piece = {
     p1: piece1,
@@ -22,7 +22,16 @@ function Board() {
 
   //Check if a win condition has been rendered
   useEffect(() => {
-    checkWin(board)
+    if(checkWin(board)) {
+      alert(`Winnier is ${player}`);
+    }
+
+    //Set to next player after move has been made.
+    if (player === 1) {
+      setPlayer(2);
+    } else {
+      setPlayer(1);
+    }
   }
   ,[board])
 
@@ -38,13 +47,6 @@ function Board() {
     setBoard(() => {
       return updateBoard(board,player,x,y)
     })
-
-    //Set to next player after move has been made.
-    if (player === 1) {
-      setPlayer(2);
-    } else {
-      setPlayer(1);
-    }
   };
   
 

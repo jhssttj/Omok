@@ -30,7 +30,7 @@ const checkWin = (board) => {
       }
       //Check different win conditions
       if (checkRow(board,i,j)||checkColumn(board,i,j)||checkDiagLR(board,i,j)||checkDiagRL(board,i,j)) {
-        console.log("hi")
+        return true;
       }
     }
   }
