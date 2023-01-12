@@ -24,7 +24,14 @@ const updateBoard = (board,player,x,y) => {
 const checkBoard = (board) => {
   for (let i=0;i<board.length;i++) {
     for (let j=0;j<board.length;j++) {
-      
+      //Dont check for 5 in a row if empty
+      if (board[i][j] === '') {
+        continue;
+      }
+      //Check different win conditions
+      if (checkRow(board,i,j)) {
+        console.log("hi")
+      }
     }
   }
   return false;
@@ -32,8 +39,15 @@ const checkBoard = (board) => {
 
 //Function check if 5 rows match in the array
 const checkRow = (board,x,y) => {
-  console.log(board[x][y])
-  
+  const piece = board[x][y];
+  for (let i=1;i<=2;i++) {
+    let left = board[x][y-i];
+    let right = board[x][y+i];
+    if (left !== piece || right !== piece) {
+      return false;
+    }
+  }
+  return true;
 }
 
 export {
