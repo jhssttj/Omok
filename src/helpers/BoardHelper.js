@@ -29,7 +29,7 @@ const checkWin = (board) => {
         continue;
       }
       //Check different win conditions
-      if (checkRow(board,i,j)) {
+      if (checkRow(board,i,j)||checkColumn(board,i,j)) {
         console.log("hi")
       }
     }
@@ -49,6 +49,21 @@ const checkRow = (board,x,y) => {
   }
   return true;
 }
+
+//Function check if 5 rows match in the array
+const checkColumn = (board,x,y) => {
+  const piece = board[x][y];
+  for (let i=1;i<=2;i++) {
+    let bottom = board[x-i][y];
+    let top = board[x+i][y];
+    if (top !== piece || bottom !== piece) {
+      return false;
+    }
+  }
+  return true;
+}
+
+
 
 export {
   initializeBoard,
