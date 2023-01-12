@@ -1,7 +1,7 @@
 import React from 'react';
 import {useState, useEffect} from 'react';
 import {colLength,boardArr} from '../backend/BoardData';
-import {updateBoard, checkBoard} from '../helpers/BoardHelper';
+import {updateBoard, checkWin} from '../helpers/BoardHelper';
 import {BoardRow} from './BoardRow';
 import '../styles/Board.css';
 import piece1 from '../images/piece-black.png';
@@ -22,7 +22,7 @@ function Board() {
 
   //Check if a win condition has been rendered
   useEffect(() => {
-    checkBoard(board)
+    checkWin(board)
   }
   ,[board])
 

@@ -21,7 +21,7 @@ const updateBoard = (board,player,x,y) => {
 }
 
 //Function to check if a win condition has been found
-const checkBoard = (board) => {
+const checkWin = (board) => {
   for (let i=0;i<board.length;i++) {
     for (let j=0;j<board.length;j++) {
       //Dont check for 5 in a row if empty
@@ -53,5 +53,5 @@ const checkRow = (board,x,y) => {
 export {
   initializeBoard,
   updateBoard,
-  checkBoard
+  checkWin
 }
