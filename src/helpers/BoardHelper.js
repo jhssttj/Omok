@@ -13,9 +13,10 @@ const initializeBoard = (x,y) => {
 
 //Function to update board Array when stone is placed
 const updateBoard = (board,player,x,y) => {
-  if (board[y][x] === "") {
-    board[y][x] = player;
-    return board;
+  let newBoard = [...board]
+  if (newBoard[y][x] === "") {
+    newBoard[y][x] = player;
+    return newBoard;
   }
 }
 
