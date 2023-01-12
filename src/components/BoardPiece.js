@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/Board.css';
 
-function BoardStone(props) {
+function BoardPiece(props) {
   //Carry over values from props
   const img = props.img;
   const className = props.className;
@@ -12,4 +12,4 @@ function BoardStone(props) {
   );
 }
 
-export {BoardStone};
+export {BoardPiece};

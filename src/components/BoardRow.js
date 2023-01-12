@@ -7,7 +7,7 @@ function BoardRow(props) {
   
   //Carry over current row value from props
   const value = props.value;
-  const placeStone = props.placeStone;
+  const placePiece = props.placePiece;
   const board = props.board;
   const piece = props.piece;
   const player = props.player;
@@ -30,7 +30,7 @@ function BoardRow(props) {
       if (i === rowLength-1) {
         className += " right";
       }
-      squares.push(<BoardSquare className={className} x={i} y={value} key={i} piece={piece} placeStone={placeStone} board={board} player={player}/>);
+      squares.push(<BoardSquare className={className} x={i} y={value} key={i} piece={piece} placePiece={placePiece} board={board} player={player}/>);
     }
     return squares;
   };

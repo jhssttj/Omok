@@ -35,7 +35,7 @@ function Board() {
   }
   ,[board])
 
-  const placeStone = (event) => {
+  const placePiece = (event) => {
 
     event.preventDefault();
     
@@ -54,7 +54,7 @@ function Board() {
  const renderRows = (colLength) => {
   let rows = [];
   for (let i=0; i<colLength; i++) {
-    rows.push(<BoardRow value={i} key={i} placeStone={placeStone} board={board} piece={piece} player={player}/>)
+    rows.push(<BoardRow value={i} key={i} placePiece={placePiece} board={board} piece={piece} player={player}/>)
   }
   return rows;
 }
