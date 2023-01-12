@@ -29,7 +29,7 @@ const checkWin = (board) => {
         continue;
       }
       //Check different win conditions
-      if (checkRow(board,i,j)||checkColumn(board,i,j)) {
+      if (checkRow(board,i,j)||checkColumn(board,i,j)||checkDiagLR(board,i,j)||checkDiagRL(board,i,j)) {
         console.log("hi")
       }
     }
@@ -50,7 +50,7 @@ const checkRow = (board,x,y) => {
   return true;
 }
 
-//Function check if 5 rows match in the array
+//Function check if 5 column match in the array
 const checkColumn = (board,x,y) => {
   const piece = board[x][y];
   for (let i=1;i<=2;i++) {
@@ -63,7 +63,31 @@ const checkColumn = (board,x,y) => {
   return true;
 }
 
+//Function check if 5 down slope diagonal match in the array
+const checkDiagLR = (board,x,y) => {
+  const piece = board[x][y];
+  for (let i=1;i<=2;i++) {
+    let topL = board[x-i][y+i];
+    let botR = board[x+i][y-i];
+    if (topL !== piece || botR !== piece) {
+      return false;
+    }
+  }
+  return true;
+}
 
+//Function check if 5 up slope diagonal match in the array
+const checkDiagRL = (board,x,y) => {
+  const piece = board[x][y];
+  for (let i=1;i<=2;i++) {
+    let topR = board[x+i][y+i];
+    let botL = board[x-i][y-i];
+    if (topR !== piece || botL !== piece) {
+      return false;
+    }
+  }
+  return true;
+}
 
 export {
   initializeBoard,
