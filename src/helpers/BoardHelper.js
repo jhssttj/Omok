@@ -20,6 +20,17 @@ const updateBoard = (board,player,x,y) => {
   }
 }
 
+//Function check if a draw condition has been found
+// const checkDraw = (board) => {
+//   let filed = true;
+//   for (let i=0;i<board.length;i++) {
+//     if (board[i].includes("")) {
+//       filed = false;
+//     }
+//   }
+//   return (!checkWin && filed);
+// }
+
 //Function to check if a win condition has been found
 const checkWin = (board) => {
   for (let i=0;i<board.length;i++) {
@@ -92,5 +103,5 @@ const checkDiagRL = (board,x,y) => {
 export {
   initializeBoard,
   updateBoard,
-  checkWin
+  checkWin,
 }
