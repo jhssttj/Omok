@@ -3,9 +3,10 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 1000px;
-  height: 1000px;
-  background-color: rgb(198,154,81);
+  width: 1100px;
+  height: 1100px;
+  background-color: white;
+  border: 5px solid rgb(115,154,189);
 }
 
 .row {
@@ -17,7 +18,7 @@
 .square {
   width: 55px;
   height: 55px;
-  background-color: rgb(198,154,81);
+  background-color: white;
   position: relative;
 
 }
@@ -26,7 +27,7 @@
   content:"";
   height: 100%;
   width:2px;
-  background:black;
+  background:rgb(206,203,206);
   position: absolute;
   top: 0%;
   right: 50%;
@@ -37,7 +38,7 @@
   content:"";
   height: 2px;
   width:100%;
-  background:black;
+  background:rgb(206,203,206);
   position: absolute;
   top: 50%;
   right: 0;
