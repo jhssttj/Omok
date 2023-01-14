@@ -23,8 +23,8 @@ function BoardSquare(props) {
     x={x} 
     y={y} 
     onClick={placed? ()=>{} : (event)=>placePiece(event)}
-    onMouseEnter={()=>setHover(true)}
-    onMouseLeave={()=>setHover(false)}
+    onMouseEnter={placed? ()=>{} : ()=>setHover(true)}
+    onMouseLeave={placed? ()=>{} : ()=>setHover(false)}
     >
       {(hover && player === 1) &&
         <BoardPiece img={piece.p1} x={x} y={y} className='piece hover'/>

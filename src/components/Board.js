@@ -4,8 +4,8 @@ import {colLength,boardArr} from '../backend/BoardData';
 import {updateBoard, checkWin} from '../helpers/BoardHelper';
 import {BoardRow} from './BoardRow';
 import '../styles/Board.css';
-import piece1 from '../images/piece-black.png';
-import piece2 from '../images/piece-white.png';
+import piece1 from '../images/pieces/piece-1.png';
+import piece2 from '../images/pieces/piece-2.png';
 
 
 
