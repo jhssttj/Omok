@@ -1,7 +1,7 @@
 import React from 'react';
 import {useState, useEffect} from 'react';
 import {colLength,boardArr} from '../backend/BoardData';
-import {updateBoard, checkWin} from '../helpers/BoardHelper';
+import {updateBoard, checkWin, checkDraw} from '../helpers/BoardHelper';
 import {BoardRow} from './BoardRow';
 import '../styles/Board.css';
 import piece1 from '../images/pieces/piece-1.png';
@@ -24,6 +24,9 @@ function Board() {
   useEffect(() => {
     if(checkWin(board)) {
       alert(`Winnier is ${player}`);
+    }
+    if(checkDraw(board)) {
+      alert('draw');
     }
 
     //Set to next player after move has been made.
