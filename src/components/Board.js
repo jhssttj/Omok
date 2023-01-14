@@ -40,8 +40,8 @@ function Board() {
     event.preventDefault();
     
     //Get current square x and y coordinates
-    const x = event.target.getAttribute("x");
-    const y = event.target.getAttribute("y");
+    const x = Number(event.target.getAttribute("x"));
+    const y = Number(event.target.getAttribute("y"));
 
     //Update board
     setBoard(() => {

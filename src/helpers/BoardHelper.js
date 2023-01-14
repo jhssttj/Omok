@@ -38,6 +38,10 @@ const checkWin = (board) => {
       //Dont check for 5 in a row if empty
       if (board[i][j] === '') {
         continue;
+      } else {}
+      //Dont check for pieces that are within outer limit when checking for 5 in a row
+      if (i-2<0||i+2>board.length-1) {
+        continue;
       }
       //Check different win conditions
       if (checkRow(board,i,j)||checkColumn(board,i,j)||checkDiagLR(board,i,j)||checkDiagRL(board,i,j)) {
