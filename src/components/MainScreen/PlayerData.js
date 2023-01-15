@@ -22,12 +22,12 @@ const pieces = [
 //Initalize Player Object for P1 and P2
 const player1 = {
   name: "player1",
-  piece: pieces[0]
+  piece: null
 }
 
 const player2 = {
   name: "player2",
-  piece: pieces[1]
+  piece: null
 }
 
 export {

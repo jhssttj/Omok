@@ -18,7 +18,7 @@ function PlayerScreen() {
         </label>
         <label>
           Piece:
-          <PlayerPieceScreen/>
+          <PlayerPieceScreen player={1}/>
         </label>
       </form>
     </div>
