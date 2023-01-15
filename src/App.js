@@ -7,7 +7,7 @@ import PlayerScreen from './components/MainScreen/PlayerScreen';
 function App() {
   return (
     <div className= "App">
-      <Board/>
+      <PlayerScreen/>
     </div>
   );
 }

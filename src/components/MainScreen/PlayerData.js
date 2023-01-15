@@ -30,7 +30,6 @@ const player2 = {
   piece: pieces[1]
 }
 
-
 export {
   player1,
   player2,
