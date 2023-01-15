@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/Board.css';
+import '../../styles/Board.css';
 
 function BoardPiece(props) {
   //Carry over values from props

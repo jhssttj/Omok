@@ -1,11 +1,11 @@
 import React from 'react';
 import {useState, useEffect} from 'react';
-import {colLength,boardArr} from '../backend/BoardData';
-import {updateBoard, checkWin, checkDraw} from '../helpers/BoardHelper';
+import {colLength,boardArr} from './BoardData';
+import {updateBoard, checkWin, checkDraw} from './BoardHelper';
 import {BoardRow} from './BoardRow';
-import '../styles/Board.css';
-import piece1 from '../images/pieces/piece-1.png';
-import piece2 from '../images/pieces/piece-2.png';
+import '../../styles/Board.css';
+import piece1 from '../../images/pieces/piece-1.png';
+import piece2 from '../../images/pieces/piece-2.png';
 
 
 

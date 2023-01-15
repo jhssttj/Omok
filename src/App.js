@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
-import Board from './components/Board';
+import Board from './components/Board/Board';
+import PlayerScreen from './components/PlayerScreen';
 
 
 function App() {

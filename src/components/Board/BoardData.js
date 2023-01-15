@@ -1,4 +1,4 @@
-import {initializeBoard} from '../helpers/BoardHelper';
+import {initializeBoard} from './BoardHelper';
 
 //Intialize Board X and Y Size (Played on 19x19)
 const rowLength = 19;

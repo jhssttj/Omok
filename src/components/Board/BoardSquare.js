@@ -1,7 +1,7 @@
 import React from 'react';
 import {useState} from 'react';
 import {BoardPiece} from './BoardPiece';
-import '../styles/Board.css';
+import '../../styles/Board.css';
 
 function BoardSquare(props) {
   //Carry over values from props

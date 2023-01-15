@@ -1,7 +1,7 @@
 import React from 'react';
 import {BoardSquare} from './BoardSquare';
-import {rowLength,colLength} from '../backend/BoardData';
-import '../styles/Board.css';
+import {rowLength,colLength} from './BoardData';
+import '../../styles/Board.css';
 
 function BoardRow(props) {
   
