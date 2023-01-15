@@ -3,7 +3,6 @@ import {useState, useEffect} from 'react';
 import {colLength,boardArr} from '../backend/BoardData';
 import {updateBoard, checkWin, checkDraw} from '../helpers/BoardHelper';
 import {BoardRow} from './BoardRow';
-import {BoardUndo} from './BoardUndo';
 import '../styles/Board.css';
 import piece1 from '../images/pieces/piece-1.png';
 import piece2 from '../images/pieces/piece-2.png';
@@ -13,8 +12,6 @@ import piece2 from '../images/pieces/piece-2.png';
 function Board() {
   //Set Board To Empty Array 
   const [board, setBoard] = useState(boardArr);
-  //Set History for Undo
-  const [history, setHistory] = useState([board]);
   //Set Current Player Turn
   const [player, setPlayer] = useState(2);
   //Set Players Piece
@@ -44,13 +41,7 @@ function Board() {
   const placePiece = (event) => {
 
     event.preventDefault();
-
-    //Insert previous board arr into history array
-    setHistory((prev) => {
-      prev.push(board);
-      return prev;
-    })
-
+    
     //Get current square x and y coordinates
     const x = Number(event.target.getAttribute("x"));
     const y = Number(event.target.getAttribute("y"));
@@ -75,7 +66,6 @@ function Board() {
   return (
     <div className= "board">
       {renderRows(colLength)}
-      <BoardUndo history={history} setBoard={setBoard}/>
     </div>
   );
 }
