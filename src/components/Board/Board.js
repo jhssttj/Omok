@@ -7,8 +7,6 @@ import '../../styles/Board.css';
 import piece1 from '../../images/pieces/piece-1.png';
 import piece2 from '../../images/pieces/piece-2.png';
 
-
-
 function Board() {
   //Set Board To Empty Array 
   const [board, setBoard] = useState(boardArr);
