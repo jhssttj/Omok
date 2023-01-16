@@ -1,8 +1,8 @@
 import React from 'react';
 import {useState} from 'react';
 import {pieces} from './PlayerData';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { solid, regular, brands, icon } from '@fortawesome/fontawesome-svg-core/import.macro'
+import { FaRegArrowAltCircleLeft,FaRegArrowAltCircleRight } from "react-icons/fa";
+
 function PlayerPieceScreen(props) {
   const [current, setCurrent] =useState(props.player===1?pieces[0]:pieces[1]);
 
@@ -22,9 +22,8 @@ function PlayerPieceScreen(props) {
 
   return (
     <div>
-      <button type="button" className = "button left" onClick={changePiece}>Left</button>
-      <button type="button" className = "button right" onClick={changePiece}>Right</button>
-      <FontAwesomeIcon icon={solid('user-secret')} />
+      <FaRegArrowAltCircleLeft className="button left" onClick={changePiece}/>
+      <FaRegArrowAltCircleRight className="button left" onClick={changePiece}/>
       {pieceRender}
     </div>
   );
