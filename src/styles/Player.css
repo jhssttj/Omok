@@ -1,8 +1,26 @@
-.main {
+.main{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height:100%;
+  width:100%;
+  border: 3px solid cyan;
+}
+
+.startScreen {
+  height: 800px;
+  width: 1000px;
+  border:3px solid red;
+  background-image: url('../images/background/mainScreen.jpg');
+  background-size: 1000px 800px;
+  background-repeat: no-repeat;
+}
+
+.playerScreen {
   display:flex;
   flex-direction: column;
   justify-content: space-evenly;
-  width:33%;
+  width:20%;
   height:50%;
   border: 3px solid rgb(115,154,189);
 }
@@ -46,4 +64,8 @@
   margin: 2%;
   height:10%;
   width:10%;
+}
+
+.button:hover {
+  color:red;
 }

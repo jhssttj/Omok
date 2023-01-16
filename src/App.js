@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.css';
 import Board from './components/Board/Board';
-import PlayerScreen from './components/MainScreen/PlayerScreen';
+import MainScreen from './components/MainScreen/MainScreen';
 
 
 function App() {
   return (
     <div className= "App">
-      <PlayerScreen/>
+      <MainScreen/>
     </div>
   );
 }

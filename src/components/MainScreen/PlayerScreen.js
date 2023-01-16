@@ -12,7 +12,7 @@ function PlayerScreen() {
   
 
   return (
-    <div className="main">
+    <div className="playerScreen">
       <form>
      
           <input type="text" name="name" defaultValue={p1.name}/>
@@ -27,4 +27,4 @@ function PlayerScreen() {
   );
 }
 
-export default PlayerScreen;
+export {PlayerScreen};
