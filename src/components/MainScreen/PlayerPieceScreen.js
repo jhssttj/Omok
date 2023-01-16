@@ -23,6 +23,7 @@ function PlayerPieceScreen(props) {
     <div>
       <button type="button" className = "button left" onClick={changePiece}>Left</button>
       <button type="button" className = "button right" onClick={changePiece}>Right</button>
+      <i class="fa-solid fa-question-circle"></i>
       {pieceRender}
     </div>
   );
