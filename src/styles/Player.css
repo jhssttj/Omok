@@ -1,3 +1,49 @@
-.screen {
+.main {
+  display:flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width:33%;
+  height:50%;
   border: 3px solid rgb(115,154,189);
+}
+
+.screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border:3px solid rgb(115,154,189);
+}
+
+.subScreen {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+
+}
+
+.imageHolder {
+  display: inline-block;
+  justify-content: center;
+  margin: 2%;
+  border: 3px solid red;
+  height: 50px;
+  width: 50px;
+
+}
+
+.imagePiece {
+  /* margin: 2%; */
+  height: 100%;
+  width: 100%;
+  object-fit:cover;
+}
+
+.button {
+  margin: 2%;
+  height:10%;
+  width:10%;
 }

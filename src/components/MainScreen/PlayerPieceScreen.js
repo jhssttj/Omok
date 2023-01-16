@@ -17,9 +17,14 @@ function PlayerPieceScreen(props) {
 
   return (
     <div className="screen">
-      <FaRegArrowAltCircleLeft className="button left" onClick={prevPiece}/>
-      <img src={pieces[current]} alt='pieceImage' className="image"/>
-      <FaRegArrowAltCircleRight className="button left" onClick={nextPiece}/>
+      <h1>Piece</h1>
+      <div className="subScreen">
+        <FaRegArrowAltCircleLeft className="button left" onClick={prevPiece}/>
+        <div className="imageHolder">
+          <img src={pieces[current]} alt='pieceImage' className="imagePiece"/>
+        </div>
+        <FaRegArrowAltCircleRight className="button right" onClick={nextPiece}/>
+      </div>
     </div>
   );
 }
