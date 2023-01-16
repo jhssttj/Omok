@@ -3,7 +3,7 @@ import {useState} from 'react';
 import {pieces} from './PlayerData';
 import { FaRegArrowAltCircleLeft,FaRegArrowAltCircleRight } from "react-icons/fa";
 
-function PlayerPieceScreen(props) {
+function PlayerSpriteScreen(props) {
   const [current, setCurrent] =useState(props.player===1?0:1);
 
   //Function to change between pieces
@@ -24,4 +24,4 @@ function PlayerPieceScreen(props) {
   );
 }
 
-export {PlayerPieceScreen};
+export {PlayerSpriteScreen};

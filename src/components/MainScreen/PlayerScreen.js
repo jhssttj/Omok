@@ -2,6 +2,8 @@ import React from 'react';
 import {useState} from 'react';
 import {player1,player2} from './PlayerData';
 import {PlayerPieceScreen} from './PlayerPieceScreen';
+import {PlayerSpriteScreen} from './PlayerSpriteScreen';
+import '../../styles/Player.css';
 
 function PlayerScreen() {
   
@@ -19,6 +21,7 @@ function PlayerScreen() {
         <label>
           Piece:
           <PlayerPieceScreen player={1}/>
+          <PlayerSpriteScreen player={1}/>
         </label>
       </form>
     </div>
