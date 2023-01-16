@@ -18,7 +18,7 @@ function PlayerPieceScreen(props) {
   return (
     <div className="screen">
       <FaRegArrowAltCircleLeft className="button left" onClick={prevPiece}/>
-      <img src={pieces[current]} alt='pieceImage'/>
+      <img src={pieces[current]} alt='pieceImage' className="image"/>
       <FaRegArrowAltCircleRight className="button left" onClick={nextPiece}/>
     </div>
   );

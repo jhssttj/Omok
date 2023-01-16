@@ -1,6 +1,6 @@
 import React from 'react';
 import {useState} from 'react';
-import {pieces} from './PlayerData';
+import {sprites} from './PlayerData';
 import { FaRegArrowAltCircleLeft,FaRegArrowAltCircleRight } from "react-icons/fa";
 
 function PlayerSpriteScreen(props) {
@@ -8,17 +8,17 @@ function PlayerSpriteScreen(props) {
 
   //Function to change between pieces
   const nextPiece = () => {
-    setCurrent(current===pieces.length-1?0:current+1);
+    setCurrent(current===sprites.length-1?0:current+1);
   }
   const prevPiece = () => {
-    setCurrent(current===0?pieces.length-1:current-1);
+    setCurrent(current===0?sprites.length-1:current-1);
   }
 
 
   return (
     <div className="screen">
       <FaRegArrowAltCircleLeft className="button left" onClick={prevPiece}/>
-      <img src={pieces[current]} alt='pieceImage'/>
+      <img src={sprites[current]} alt='pieceImage' className="image"/>
       <FaRegArrowAltCircleRight className="button left" onClick={nextPiece}/>
     </div>
   );
