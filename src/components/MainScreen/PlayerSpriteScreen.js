@@ -20,8 +20,8 @@ function PlayerSpriteScreen(props) {
       <h1 className="heading">Sprite</h1>
       <div className="subScreen">
         <FaRegArrowAltCircleLeft className="button left" onClick={prevPiece}/>
-        <div className="imageHolder">
-        <img src={sprites[current]} alt='pieceImage' className="imageSprite"/>
+        <div className="spriteHolder">
+          <img src={sprites[current]} alt='pieceImage' className="imageSprite"/>
         </div>
         <FaRegArrowAltCircleRight className="button right" onClick={nextPiece}/>
       </div>

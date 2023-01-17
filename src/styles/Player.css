@@ -62,12 +62,20 @@
   margin:0%;
 }
 
-.imageHolder {
+.pieceHolder {
   display: flex;
   justify-content: center;
   border: 3px solid red;
   height: 50%;
   width: 25%;
+}
+
+.spriteHolder {
+  display:flex;
+  justify-content: center;
+  border: 1px solid blue;
+  height:100%;
+  width:75%;
 }
 
 .imagePiece {
@@ -76,9 +84,15 @@
   object-fit:contain;
 }
 
+.imageSprite {
+  height: 100%;
+  width: 100%;
+  object-fit:contain;
+}
+
 .button {
   margin: 2%;
-  height:50%;
+  height:50px;
   width:auto;
 }
 

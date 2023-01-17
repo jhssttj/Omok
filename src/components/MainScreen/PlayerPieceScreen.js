@@ -20,7 +20,7 @@ function PlayerPieceScreen(props) {
       <h1 className="heading">Piece</h1>
       <div className="subScreen">
         <FaRegArrowAltCircleLeft className="button left" onClick={prevPiece}/>
-        <div className="imageHolder">
+        <div className="pieceHolder">
           <img src={pieces[current]} alt='pieceImage' className="imagePiece"/>
         </div>
         <FaRegArrowAltCircleRight className="button right" onClick={nextPiece}/>
