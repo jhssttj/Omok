@@ -13,16 +13,9 @@ function PlayerScreen() {
 
   return (
     <div className="playerScreen">
-      <form>
-     
           <input type="text" name="name" defaultValue={p1.name}/>
- 
-       
           <PlayerSpriteScreen player={1}/>
-      
           <PlayerPieceScreen player={1}/>
-       
-      </form>
     </div>
   );
 }

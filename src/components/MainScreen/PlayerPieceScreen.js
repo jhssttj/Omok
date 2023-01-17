@@ -17,7 +17,7 @@ function PlayerPieceScreen(props) {
 
   return (
     <div className="screen">
-      <h1>Piece</h1>
+      <h1 className="heading">Piece</h1>
       <div className="subScreen">
         <FaRegArrowAltCircleLeft className="button left" onClick={prevPiece}/>
         <div className="imageHolder">

@@ -23,10 +23,19 @@
   display:flex;
   flex-direction: column;
   justify-content: space-evenly;
-  width:20%;
-  height:50%;
+  width:15%;
+  height:40%;
   background: white;
   border: 3px solid rgb(115,154,189);
+}
+
+.themeScreen {
+  display:flex;
+  flex-direction: column;
+  height:40%;
+  width:20%;
+  background:white;
+  border: 3px solid orange;
 }
 
 .screen {
@@ -34,7 +43,8 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  border:3px solid rgb(115,154,189);
+  height:33%;
+  width:100%;
 }
 
 .subScreen {
@@ -47,29 +57,41 @@
 
 }
 
-.imageHolder {
-  display: inline-block;
-  justify-content: center;
-  margin: 2%;
-  border: 3px solid red;
-  height: 50px;
-  width: 50px;
+.heading {
+  height:33%;
+  margin:0%;
+}
 
+.imageHolder {
+  display: flex;
+  justify-content: center;
+  border: 3px solid red;
+  height: 50%;
+  width: 25%;
 }
 
 .imagePiece {
-  /* margin: 2%; */
   height: 100%;
   width: 100%;
-  object-fit:cover;
+  object-fit:contain;
 }
 
 .button {
   margin: 2%;
-  height:10%;
-  width:10%;
+  height:50%;
+  width:auto;
 }
 
 .button:hover {
   color:red;
+}
+
+.button {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
