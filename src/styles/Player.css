@@ -67,12 +67,14 @@
   justify-content: center;
   border: 3px solid red;
   height: 50%;
+  margin:0%;
   width: 25%;
 }
 
 .spriteHolder {
   display:flex;
   justify-content: center;
+  margin:0%;
   border: 1px solid blue;
   height:100%;
   width:75%;
@@ -87,7 +89,7 @@
 .imageSprite {
   height: 100%;
   width: 100%;
-  object-fit:contain;
+  object-fit:cover;
 }
 
 .button {
