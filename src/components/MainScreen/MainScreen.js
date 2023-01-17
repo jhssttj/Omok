@@ -7,13 +7,11 @@ function MainScreen() {
 
   
 
-  return (
-    <div className="main">
-       
+  return (  
+          <div className="startScreen">
           <PlayerScreen/>
-          <div className="startScreen"></div>
           <PlayerScreen/>
-    </div>
+          </div>
   );
 }
 

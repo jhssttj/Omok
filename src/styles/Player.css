@@ -8,11 +8,14 @@
 }
 
 .startScreen {
-  height: 800px;
-  width: 1000px;
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 75vh;
+  width: 75vw;
   border:3px solid red;
-  background-image: url('../images/background/mainScreen.jpg');
-  background-size: 1000px 800px;
+  background-image: url('../images/background/mainScreen.png');
+  background-size: 100% 100%;
   background-repeat: no-repeat;
 }
 
@@ -22,6 +25,7 @@
   justify-content: space-evenly;
   width:20%;
   height:50%;
+  background: white;
   border: 3px solid rgb(115,154,189);
 }
 
