@@ -96,9 +96,13 @@
 }
 
 .name {
-  max-height: size 100%;
   width: 80%;
-  background-color: white;
+  height: 8%;
+  text-align: center;
+  font-weight:900;
+  border:none;
+  border-radius: 5px;
+  background-color: rgb(115,154,189,0.75);;
 
 }
 
@@ -114,6 +118,7 @@
 }
 
 .button:active {
+  display: flex;
   color: white;
 }
 
