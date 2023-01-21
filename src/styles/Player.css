@@ -7,16 +7,37 @@
   border: 3px solid cyan;
 }
 
+.mainScreen {
+  display: flex;
+  flex-direction: column;
+  height: 75vh;
+  width: 75vw;
+  background-image: url('../images/background/mainScreen.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.topBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width:100%;
+  height: 5%;
+  background: rgb(176, 203, 228);
+}
+
+.logo {
+  height:80%;
+  margin: 1%;
+}
+
 .startScreen {
   display:flex;
   flex-direction: row;
   justify-content: center;
-  height: 75vh;
-  width: 75vw;
-  border:3px solid red;
-  background-image: url('../images/background/mainScreen.png');
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
 }
 
 .playerScreen {
