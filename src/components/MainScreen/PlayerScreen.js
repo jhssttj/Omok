@@ -13,7 +13,7 @@ function PlayerScreen() {
 
   return (
     <div className="playerScreen">
-          <input type="text" name="name" defaultValue={p1.name}/>
+          <input type="text" className="name" defaultValue={p1.name}/>
           <PlayerSpriteScreen player={1}/>
           <PlayerPieceScreen player={1}/>
     </div>
