@@ -5,7 +5,7 @@ import logo from '../../images/logo/logo.png'
 function TopBar() {
 
   return (  
-    <div className="bar">
+    <div className="TopBar">
       <img className="logo" src={logo} alt="logo"/>
       <p className="topText">Maplestory Omok</p>
     </div>
