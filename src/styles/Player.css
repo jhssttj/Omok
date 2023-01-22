@@ -17,7 +17,7 @@
   background-repeat: no-repeat;
 }
 
-.topBar {
+.bar {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;

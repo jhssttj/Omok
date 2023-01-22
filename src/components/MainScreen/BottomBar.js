@@ -2,14 +2,13 @@ import React from 'react';
 import '../../styles/Player.css';
 import logo from '../../images/logo/logo.png'
 
-function TopBar() {
+function BottomBar() {
 
   return (  
     <div className="bar">
-      <img className="logo" src={logo} alt="logo"/>
-      <p className="topText">Maplestory Omok</p>
+      <a className="botText" href="https://github.com/jhssttj">&copy; Kevin Lee</a>
     </div>
   );
 }
 
-export {TopBar};
+export {BottomBar};

@@ -3,6 +3,7 @@ import '../../styles/Player.css';
 import {PlayerScreen} from './PlayerScreen';
 import {ThemeScreen} from './ThemeScreen';
 import {TopBar} from './TopBar';
+import {BottomBar} from './BottomBar';
 
 function MainScreen() {
   
@@ -17,6 +18,7 @@ function MainScreen() {
           <ThemeScreen/>
           <PlayerScreen/>
           </div>
+          <BottomBar/>
       </div>
   );
 }
