@@ -14,9 +14,9 @@ function MainScreen() {
       <div className="mainScreen">
           <TopBar/>
           <div className="startScreen">
-          <PlayerScreen/>
-          <ThemeScreen/>
-          <PlayerScreen/>
+            <PlayerScreen/>
+            <ThemeScreen/>
+            <PlayerScreen/>
           </div>
           <BottomBar/>
       </div>

@@ -29,6 +29,13 @@ import sprite17 from '../../images/sprites/s17.png';
 import sprite18 from '../../images/sprites/s18.png';
 import sprite19 from '../../images/sprites/s19.png';
 
+
+//Import Theme Settings
+import theme1 from '../../images/themes/t1.jpg';
+import theme2 from '../../images/themes/t2.jpg';
+import theme3 from '../../images/themes/t3.jpg';
+import theme4 from '../../images/themes/t4.jpg';
+
 //Initialize Array of image for selection
 const pieces = [
   piece1,
@@ -61,7 +68,14 @@ const sprites = [
   sprite17,
   sprite18,
   sprite19
-]
+];
+
+const themes = [
+  theme1,
+  theme2,
+  theme3,
+  theme4
+];
 
 //Initalize Player Object for P1 and P2
 const player1 = {
@@ -78,5 +92,6 @@ export {
   player1,
   player2,
   pieces,
-  sprites
+  sprites,
+  themes
 };
