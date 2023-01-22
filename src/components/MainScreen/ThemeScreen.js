@@ -6,9 +6,9 @@ function ThemeScreen() {
 
   return (  
     <div className="themeScreen">
-      <h1>Select your theme</h1>
+      <h1 className='themeHeading'>Theme</h1>
       <ThemeSelectScreen/>
-      <button>Hi</button>
+      <button className="start">PLAY</button>
     </div>
   );
 }

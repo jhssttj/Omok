@@ -65,7 +65,7 @@
 .themeScreen {
   display:flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-evenly;
   align-items: center;
   height:80%;
   width:40%;
@@ -112,6 +112,11 @@
   font-size: 150%;
   height:20%;
   margin:0%;
+}
+
+.themeHeading {
+  height:5%;
+  margin: 0%;
 }
 
 .pieceHolder {
@@ -174,6 +179,26 @@
   margin: 2%;
   height: 100%;
   width: 15%;
+}
+
+.start {
+  background:rgb(236, 128, 27);
+  height: 10%;
+  width: 30%;
+  border-radius: 5px;
+  font-size: 150%;
+  color: white;
+  font-weight: bold;
+  border: none;
+}
+
+.start:hover {
+  transform:scale(1.1);
+}
+
+.start:active {
+  color:black;
+  background-color:white;
 }
 
 .button:hover {
