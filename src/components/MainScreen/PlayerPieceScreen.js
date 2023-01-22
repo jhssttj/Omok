@@ -1,5 +1,4 @@
 import React from 'react';
-import {useState} from 'react';
 import {pieces} from './PlayerData';
 import { FaRegArrowAltCircleLeft,FaRegArrowAltCircleRight } from "react-icons/fa";
 

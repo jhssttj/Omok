@@ -1,6 +1,4 @@
 import React from 'react';
-import {useState} from 'react';
-import {player1,player2} from './PlayerData';
 import {PlayerPieceScreen} from './PlayerPieceScreen';
 import {PlayerSpriteScreen} from './PlayerSpriteScreen';
 import '../../styles/Player.css';
@@ -10,7 +8,7 @@ function PlayerScreen(props) {
   
   return (
     <div className="playerScreen">
-          <input type="text" className="name" defaultValue={p.name}/>
+          <h1 type="text" className="name">{p.name}</h1>
           <PlayerSpriteScreen player={p} currentS={props.currentS} setCurrentS={props.setCurrentS}/>
           <PlayerPieceScreen player={p} currentP={props.currentP} setCurrentP={props.setCurrentP}/>
     </div>

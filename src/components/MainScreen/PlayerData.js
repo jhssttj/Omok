@@ -79,13 +79,13 @@ const themes = [
 
 //Initalize Player Object for P1 and P2
 const player1 = {
-  name: "player1",
+  name: "Player 1",
   piece: 0,
   sprite: 0,
 }
 
 const player2 = {
-  name: "player2",
+  name: "Player 2",
   piece: 1,
   sprite: 1,
 }
