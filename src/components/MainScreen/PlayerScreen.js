@@ -6,11 +6,6 @@ import {PlayerSpriteScreen} from './PlayerSpriteScreen';
 import '../../styles/Player.css';
 
 function PlayerScreen() {
-  
-  const [p1, setP1] = useState(player1);
-  const [p2, setP2] = useState(player2);
-  
-
   return (
     <div className="playerScreen">
           <input type="text" className="name" defaultValue={p1.name}/>

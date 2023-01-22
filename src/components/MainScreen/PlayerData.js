@@ -80,12 +80,14 @@ const themes = [
 //Initalize Player Object for P1 and P2
 const player1 = {
   name: "player1",
-  piece: null
+  piece: 0,
+  sprite: 0,
 }
 
 const player2 = {
   name: "player2",
-  piece: null
+  piece: 1,
+  sprite: 1,
 }
 
 export {
