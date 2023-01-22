@@ -1,17 +1,18 @@
 import React from 'react';
-import {useState} from 'react';
 import {sprites} from './PlayerData';
 import { FaRegArrowAltCircleLeft,FaRegArrowAltCircleRight } from "react-icons/fa";
 
 function PlayerSpriteScreen(props) {
-  const [current, setCurrent] =useState(props.player===1?0:1);
+
+  const currentS=props.currentS;
+  const setCurrentS=props.setCurrentS;
 
   //Function to change between pieces
   const nextPiece = () => {
-    setCurrent(current===sprites.length-1?0:current+1);
+    setCurrentS(currentS===sprites.length-1?0:currentS+1);
   }
   const prevPiece = () => {
-    setCurrent(current===0?sprites.length-1:current-1);
+    setCurrentS(currentS===0?sprites.length-1:currentS-1);
   }
 
 
@@ -21,7 +22,7 @@ function PlayerSpriteScreen(props) {
       <div className="subScreen">
         <FaRegArrowAltCircleLeft className="button left" onClick={prevPiece}/>
         <div className="spriteHolder">
-          <img src={sprites[current]} alt='pieceImage' className="imageSprite"/>
+          <img src={sprites[currentS]} alt='pieceImage' className="imageSprite"/>
         </div>
         <FaRegArrowAltCircleRight className="button right" onClick={nextPiece}/>
       </div>

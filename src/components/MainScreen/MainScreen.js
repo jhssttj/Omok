@@ -29,9 +29,9 @@ function MainScreen() {
       <div className="mainScreen">
           <TopBar/>
           <div className="startScreen">
-            <PlayerScreen p1={p1} currentP1={currentP1} setCurrentP1={setCurrentP1} currentS1={setCurrentS1}/>
+            <PlayerScreen p={p1} currentP={currentP1} setCurrentP={setCurrentP1} currentS={currentS1} setCurrentS={setCurrentS1}/>
             <ThemeScreen currentT={currentT} setCurrentT={setCurrentT}/>
-            <PlayerScreen p2={p2} currentP2={currentP2} setCurrentP2={setCurrentP2} currentS2={setCurrentS2}/>
+            <PlayerScreen p={p2} currentP={currentP2} setCurrentP={setCurrentP2} currentS={currentS2} setCurrentS={setCurrentS2}/>
           </div>
           <BottomBar/>
       </div>
