@@ -5,6 +5,8 @@ import {updateBoard, checkWin, checkDraw} from './BoardHelper';
 import {BoardRow} from './BoardRow';
 import '../../styles/Board.css';
 import{pieces} from '../MainScreen/PlayerData';
+import{sprites} from '../MainScreen/PlayerData';
+import { WinnerScreen } from '../MainScreen/WinnerScreen';
 
 function Board(props) {
   //Set props as constant
@@ -18,13 +20,23 @@ function Board(props) {
     p1: pieces[info.p1],
     p2: pieces[info.p2]
   };
+  //Set Player Sprite
+  const sprite = {
+    s1: sprites[info.s1],
+    s2: sprites[info.s2]
+  }
+  //Set Winner/Draw Render
+  const [winner, setWinner] = useState(false);
+  const [draw, setDraw] = useState(false);
 
   //Check if a win condition has been rendered
   useEffect(() => {
     if(checkWin(board)) {
+      setWinner(true);
       alert(`Winnier is ${player}`);
     }
     if(checkDraw(board)) {
+      setDraw(true);
       alert('draw');
     }
 
@@ -65,6 +77,7 @@ function Board(props) {
   return (
     <div className= "board">
       {renderRows(colLength)}
+      <WinnerScreen sprite={sprite.s1}/>
     </div>
   );
 }

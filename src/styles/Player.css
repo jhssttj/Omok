@@ -116,6 +116,14 @@
   margin:0%;
 }
 
+.winnerHeading {
+  height: 20%;
+  width:80%;
+  margin: 0%;
+  text-align: center;
+  font-size: 150%;
+}
+
 .themeHeading {
   height:5%;
   margin: 0%;
@@ -165,6 +173,19 @@
   object-fit:contain;
 }
 
+.winnerScreen{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width:20%;
+  height:20%;
+  background:rgb(236, 128, 27, 0.9);
+  border-radius: 25px;
+  color:white;
+  position: absolute;
+}
+
 .name {
   width: 80%;
   height: 13%;
@@ -174,7 +195,7 @@
   margin: 0%;
   border:none;
   border-radius: 25px;
-  background-color: rgb(115,154,189,0.75);;
+  background-color: rgb(115,154,189,0.75);
 }
 
 .error {
