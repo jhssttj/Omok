@@ -184,6 +184,7 @@
   border-radius: 25px;
   color:white;
   position: absolute;
+  z-index: 1;
 }
 
 .name {

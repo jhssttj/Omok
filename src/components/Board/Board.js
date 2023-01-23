@@ -32,8 +32,9 @@ function Board(props) {
   //Check if a win condition has been rendered
   useEffect(() => {
     if(checkWin(board)) {
-      setWinner(true);
-      alert(`Winnier is ${player}`);
+      player===1
+        ?setWinner(["Player 1",sprite.s1])
+        :setWinner(["Player 2",sprite.s2])
     }
     if(checkDraw(board)) {
       setDraw(true);
@@ -77,7 +78,10 @@ function Board(props) {
   return (
     <div className= "board">
       {renderRows(colLength)}
-      <WinnerScreen sprite={sprite.s1}/>
+      {winner
+        ?<WinnerScreen winner={winner}/>
+        :<></>
+      }
     </div>
   );
 }
