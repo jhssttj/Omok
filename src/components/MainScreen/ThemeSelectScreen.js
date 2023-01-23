@@ -19,6 +19,7 @@ function ThemeSelectScreen(props) {
 
   return (
     <div className="screen" id="themeScreen">
+      
       <div className="subScreen">
         <FaRegArrowAltCircleLeft className="button left" onClick={prevPiece}/>
         <div className="themeHolder">
@@ -26,6 +27,10 @@ function ThemeSelectScreen(props) {
         </div>
         <FaRegArrowAltCircleRight className="button right" onClick={nextPiece}/>
       </div>
+      {props.error
+        ?<p className="error">PLAYERS PIECE CAN NOT BE SAME</p>
+        :<p className="error"></p> 
+      }
     </div>
   );
 }

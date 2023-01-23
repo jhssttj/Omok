@@ -33,7 +33,13 @@ function MainScreen() {
 
   //Start game condition
   const [start, setStart] =useState(false);
+  const [error, setError] = useState(false)
   const startGame = () => {
+    setError(false);
+    if (currentP1===currentP2) {
+      setError(true);
+      return;
+    }
     setStart(true)
   }
 
@@ -46,7 +52,7 @@ function MainScreen() {
             <PlayerScreen p={player1} currentP={currentP1} setCurrentP={setCurrentP1} currentS={currentS1} setCurrentS={setCurrentS1} start={start}/>
             {start
               ?<Board info={info}/>
-              :<ThemeScreen currentT={currentT} setCurrentT={setCurrentT} startGame={startGame}/>
+              :<ThemeScreen currentT={currentT} setCurrentT={setCurrentT} startGame={startGame} error={error}/>
             }
             {/* <ThemeScreen currentT={currentT} setCurrentT={setCurrentT} info={info} setStart={setStart}/> */}
             <PlayerScreen p={player2} currentP={currentP2} setCurrentP={setCurrentP2} currentS={currentS2} setCurrentS={setCurrentS2} start={start}/>

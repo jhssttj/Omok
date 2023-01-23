@@ -85,6 +85,9 @@
 }
 
 #themeScreen {
+  display:flex;
+  justify-content: center;
+  align-items: center;
   height:60%;
   width:80%;
 }
@@ -172,7 +175,12 @@
   border:none;
   border-radius: 25px;
   background-color: rgb(115,154,189,0.75);;
+}
 
+.error {
+  color: red;
+  font-weight: bold;
+  margin:0%;
 }
 
 .button {
