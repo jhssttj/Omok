@@ -20,11 +20,11 @@ function PlayerPieceScreen(props) {
     <div className="screen">
       <h1 className="heading">Piece</h1>
       <div className="subScreen">
-        <FaRegArrowAltCircleLeft className="button left" onClick={prevPiece}/>
+        <FaRegArrowAltCircleLeft className={props.start?"buttonHide":"button left"} onClick={prevPiece}/>
         <div className="pieceHolder">
           <img src={pieces[currentP]} alt='pieceImage' className="imagePiece"/>
         </div>
-        <FaRegArrowAltCircleRight className="button right" onClick={nextPiece}/>
+        <FaRegArrowAltCircleRight className={props.start?"buttonHide":"button right"} onClick={nextPiece}/>
       </div>
     </div>
   );

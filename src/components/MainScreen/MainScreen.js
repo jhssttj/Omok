@@ -43,13 +43,13 @@ function MainScreen() {
       >
           <TopBar/>
           <div className="startScreen">
-            <PlayerScreen p={player1} currentP={currentP1} setCurrentP={setCurrentP1} currentS={currentS1} setCurrentS={setCurrentS1}/>
+            <PlayerScreen p={player1} currentP={currentP1} setCurrentP={setCurrentP1} currentS={currentS1} setCurrentS={setCurrentS1} start={start}/>
             {start
               ?<Board info={info}/>
               :<ThemeScreen currentT={currentT} setCurrentT={setCurrentT} startGame={startGame}/>
             }
             {/* <ThemeScreen currentT={currentT} setCurrentT={setCurrentT} info={info} setStart={setStart}/> */}
-            <PlayerScreen p={player2} currentP={currentP2} setCurrentP={setCurrentP2} currentS={currentS2} setCurrentS={setCurrentS2}/>
+            <PlayerScreen p={player2} currentP={currentP2} setCurrentP={setCurrentP2} currentS={currentS2} setCurrentS={setCurrentS2} start={start}/>
           </div>
           <BottomBar/>
       </div>

@@ -9,8 +9,8 @@ function PlayerScreen(props) {
   return (
     <div className="playerScreen">
           <h1 type="text" className="name">{p.name}</h1>
-          <PlayerSpriteScreen player={p} currentS={props.currentS} setCurrentS={props.setCurrentS}/>
-          <PlayerPieceScreen player={p} currentP={props.currentP} setCurrentP={props.setCurrentP}/>
+          <PlayerSpriteScreen player={p} currentS={props.currentS} setCurrentS={props.setCurrentS} start={props.start}/>
+          <PlayerPieceScreen player={p} currentP={props.currentP} setCurrentP={props.setCurrentP} start={props.start}/>
     </div>
   );
 }

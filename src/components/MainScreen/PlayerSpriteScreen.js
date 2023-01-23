@@ -20,11 +20,11 @@ function PlayerSpriteScreen(props) {
     <div className="screen">
       <h1 className="heading">Sprite</h1>
       <div className="subScreen">
-        <FaRegArrowAltCircleLeft className="button left" onClick={prevPiece}/>
+        <FaRegArrowAltCircleLeft className={props.start?"buttonHide":"button left"} onClick={prevPiece}/>
         <div className="spriteHolder">
           <img src={sprites[currentS]} alt='pieceImage' className="imageSprite"/>
         </div>
-        <FaRegArrowAltCircleRight className="button right" onClick={nextPiece}/>
+        <FaRegArrowAltCircleRight className={props.start?"buttonHide":"button right"} onClick={nextPiece}/>
       </div>
     </div>
   );
