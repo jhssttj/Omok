@@ -12,6 +12,7 @@ function BoardSquare(props) {
   const board = props.board;
   const piece = props.piece
   const player = props.player;
+  const gameOver = props.gameOver;
   //Find if piece has already been placed or not and disable onclick if so
   const placed = (board[y][x] !== "");
   //Set hover state to render pre-placed Piece location
@@ -22,8 +23,8 @@ function BoardSquare(props) {
     className={className} 
     x={x} 
     y={y} 
-    onClick={placed? ()=>{} : (event)=>placePiece(event)}
-    onMouseEnter={placed? ()=>setHover(false) : ()=>setHover(true)}
+    onClick={placed||gameOver? ()=>{} : (event)=>placePiece(event)}
+    onMouseEnter={placed||gameOver? ()=>setHover(false) : ()=>setHover(true)}
     onMouseLeave={()=>setHover(false)}
     >
       {(hover && player === 1) &&

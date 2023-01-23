@@ -28,6 +28,7 @@ function Board(props) {
   //Set Winner/Draw Render
   const [winner, setWinner] = useState(false);
   const [draw, setDraw] = useState(false);
+  const [gameOver, setOver] = useState(false);
 
   //Check if a win condition has been rendered
   useEffect(() => {
@@ -35,6 +36,7 @@ function Board(props) {
       player===1
         ?setWinner(["Player 1",sprite.s1])
         :setWinner(["Player 2",sprite.s2])
+      setOver(true);  
     }
     if(checkDraw(board)) {
       setDraw(true);
@@ -69,7 +71,7 @@ function Board(props) {
  const renderRows = (colLength) => {
   let rows = [];
   for (let i=0; i<colLength; i++) {
-    rows.push(<BoardRow value={i} key={i} placePiece={placePiece} board={board} piece={piece} player={player}/>)
+    rows.push(<BoardRow value={i} key={i} placePiece={placePiece} board={board} piece={piece} player={player} gameOver={gameOver}/>)
   }
   return rows;
 }
