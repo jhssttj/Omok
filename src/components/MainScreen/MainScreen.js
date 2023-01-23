@@ -2,6 +2,7 @@ import React from 'react';
 import {useState} from 'react';
 import {player1,player2} from './PlayerData';
 import {themes} from './PlayerData';
+import themeMain from '../../images/background/mainScreen.png'
 import '../../styles/Player.css';
 import {PlayerScreen} from './PlayerScreen';
 import {ThemeScreen} from './ThemeScreen';
@@ -28,7 +29,6 @@ function MainScreen() {
     p2: currentP2,
     s1: currentS1,
     s2: currentS2,
-    t: currentT
   }
 
   //Start game condition
@@ -38,7 +38,9 @@ function MainScreen() {
   }
 
   return (  
-      <div className="mainScreen">
+      <div className="mainScreen"
+           style={{backgroundImage:(start?`url(${themes[currentT]})`:`url(${themeMain})`)}}
+      >
           <TopBar/>
           <div className="startScreen">
             <PlayerScreen p={player1} currentP={currentP1} setCurrentP={setCurrentP1} currentS={currentS1} setCurrentS={setCurrentS1}/>

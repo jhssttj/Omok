@@ -31,6 +31,7 @@ import sprite19 from '../../images/sprites/s19.png';
 
 
 //Import Theme Settings
+import themeMain from '../../images/background/mainScreen.png'
 import theme1 from '../../images/themes/t1.jpg';
 import theme2 from '../../images/themes/t2.jpg';
 import theme3 from '../../images/themes/t3.jpg';
