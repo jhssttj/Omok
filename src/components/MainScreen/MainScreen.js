@@ -7,12 +7,9 @@ import {PlayerScreen} from './PlayerScreen';
 import {ThemeScreen} from './ThemeScreen';
 import {TopBar} from './TopBar';
 import {BottomBar} from './BottomBar';
+import Board from '../Board/Board';
 
 function MainScreen() {
-
-  //Players
-  const [p1, setP1] = useState(player1);
-  const [p2, setP2] = useState(player2);
 
   //Pieces
   const [currentP1, setCurrentP1] =useState(player1.piece);
@@ -25,13 +22,32 @@ function MainScreen() {
   //Theme
   const [currentT, setCurrentT] =useState(0);
 
+  //Compile Info for submit
+  const info = {
+    p1: currentP1,
+    p2: currentP2,
+    s1: currentS1,
+    s2: currentS2,
+    t: currentT
+  }
+
+  //Start game condition
+  const [start, setStart] =useState(false);
+  const startGame = () => {
+    setStart(true)
+  }
+
   return (  
       <div className="mainScreen">
           <TopBar/>
           <div className="startScreen">
-            <PlayerScreen p={p1} currentP={currentP1} setCurrentP={setCurrentP1} currentS={currentS1} setCurrentS={setCurrentS1}/>
-            <ThemeScreen currentT={currentT} setCurrentT={setCurrentT}/>
-            <PlayerScreen p={p2} currentP={currentP2} setCurrentP={setCurrentP2} currentS={currentS2} setCurrentS={setCurrentS2}/>
+            <PlayerScreen p={player1} currentP={currentP1} setCurrentP={setCurrentP1} currentS={currentS1} setCurrentS={setCurrentS1}/>
+            {start
+              ?<Board/>
+              :<ThemeScreen currentT={currentT} setCurrentT={setCurrentT} startGame={startGame}/>
+            }
+            {/* <ThemeScreen currentT={currentT} setCurrentT={setCurrentT} info={info} setStart={setStart}/> */}
+            <PlayerScreen p={player2} currentP={currentP2} setCurrentP={setCurrentP2} currentS={currentS2} setCurrentS={setCurrentS2}/>
           </div>
           <BottomBar/>
       </div>
