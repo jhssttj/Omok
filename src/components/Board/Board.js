@@ -4,18 +4,19 @@ import {colLength,boardArr} from './BoardData';
 import {updateBoard, checkWin, checkDraw} from './BoardHelper';
 import {BoardRow} from './BoardRow';
 import '../../styles/Board.css';
-import piece1 from '../../images/pieces/piece-1.png';
-import piece2 from '../../images/pieces/piece-2.png';
+import{pieces} from '../MainScreen/PlayerData';
 
-function Board() {
+function Board(props) {
+  //Set props as constant
+  const info = props.info;
   //Set Board To Empty Array 
   const [board, setBoard] = useState(boardArr);
   //Set Current Player Turn
   const [player, setPlayer] = useState(2);
   //Set Players Piece
   const piece = {
-    p1: piece1,
-    p2: piece2
+    p1: pieces[info.p1],
+    p2: pieces[info.p2]
   };
 
   //Check if a win condition has been rendered

@@ -43,7 +43,7 @@ function MainScreen() {
           <div className="startScreen">
             <PlayerScreen p={player1} currentP={currentP1} setCurrentP={setCurrentP1} currentS={currentS1} setCurrentS={setCurrentS1}/>
             {start
-              ?<Board/>
+              ?<Board info={info}/>
               :<ThemeScreen currentT={currentT} setCurrentT={setCurrentT} startGame={startGame}/>
             }
             {/* <ThemeScreen currentT={currentT} setCurrentT={setCurrentT} info={info} setStart={setStart}/> */}
