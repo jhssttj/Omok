@@ -30,6 +30,7 @@ function MainScreen() {
     p2: currentP2,
     s1: currentS1,
     s2: currentS2,
+    theme:currentT
   }
 
   //Bring start music

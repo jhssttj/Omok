@@ -9,6 +9,7 @@ import{sprites} from '../MainScreen/PlayerData';
 import { WinnerScreen } from '../MainScreen/WinnerScreen';
 import { DrawScreen } from '../MainScreen/DrawScreen';
 import { soundEffects } from '../MainScreen/SoundData';
+import { bgm } from '../MainScreen/SoundData';
 
 function Board(props) {
   //Set props as constant
@@ -65,6 +66,10 @@ function Board(props) {
     }
   }
   ,[board])
+
+  useEffect(() => {
+      new Audio(bgm[info.theme]).play();
+  },[])
 
   const placePiece = (event) => {
 
