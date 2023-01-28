@@ -7,6 +7,7 @@ import '../../styles/Board.css';
 import{pieces} from '../MainScreen/PlayerData';
 import{sprites} from '../MainScreen/PlayerData';
 import { WinnerScreen } from '../MainScreen/WinnerScreen';
+import { DrawScreen } from '../MainScreen/DrawScreen';
 
 function Board(props) {
   //Set props as constant
@@ -40,7 +41,7 @@ function Board(props) {
     }
     if(checkDraw(board)) {
       setDraw(true);
-      alert('draw');
+      setOver(true);  
     }
 
     //Set to next player after move has been made.
@@ -82,6 +83,10 @@ function Board(props) {
       {renderRows(colLength)}
       {winner
         ?<WinnerScreen winner={winner}/>
+        :<></>
+      }
+      {draw
+        ?<DrawScreen/>
         :<></>
       }
     </div>
