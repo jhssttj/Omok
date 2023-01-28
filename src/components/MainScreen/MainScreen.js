@@ -1,5 +1,5 @@
 import React from 'react';
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import {player1,player2} from './PlayerData';
 import {themes} from './PlayerData';
 import themeMain from '../../images/background/mainScreen.png'
@@ -10,6 +10,7 @@ import {TopBar} from './TopBar';
 import {BottomBar} from './BottomBar';
 import Board from '../Board/Board';
 import { soundEffects } from './SoundData';
+import { bgm } from './SoundData';
 
 function MainScreen() {
 
@@ -30,12 +31,20 @@ function MainScreen() {
     p2: currentP2,
     s1: currentS1,
     s2: currentS2,
-    theme:currentT
+    theme:currentT,
   }
 
   //Bring start music
   const startSound = () => {
-    new Audio(soundEffects.start).play();
+    const start = new Audio(soundEffects.start);
+    start.volume=0.2;
+    start.play();
+  }
+
+  const bgmSound = () => {
+    const bgmMusic = new Audio(bgm[currentT])
+    bgmMusic.volume=0.2;
+    bgmMusic.play();
   }
 
   //Start game condition
@@ -49,6 +58,7 @@ function MainScreen() {
     }
     setStart(true);
     startSound();
+    bgmSound();
   }
 
   return (  

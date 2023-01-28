@@ -9,7 +9,6 @@ import{sprites} from '../MainScreen/PlayerData';
 import { WinnerScreen } from '../MainScreen/WinnerScreen';
 import { DrawScreen } from '../MainScreen/DrawScreen';
 import { soundEffects } from '../MainScreen/SoundData';
-import { bgm } from '../MainScreen/SoundData';
 
 function Board(props) {
   //Set props as constant
@@ -30,13 +29,19 @@ function Board(props) {
   }
   //Make sound function
   const placeSound = () => {
-    new Audio(soundEffects.place).play();
+    const place = new Audio(soundEffects.place)
+    place.volume=0.3;
+    place.play();
   }
   const winSound = () => {
-    new Audio(soundEffects.win).play();
+    const win = new Audio(soundEffects.win)
+    win.volume=0.3;
+    win.play();
   }
   const drawSound = () => {
-    new Audio(soundEffects.draw).play();
+    const draw = new Audio(soundEffects.draw)
+    draw.volume=0.3;
+    draw.play();
   }
   //Set Winner/Draw Render
   const [winner, setWinner] = useState(false);
@@ -67,9 +72,6 @@ function Board(props) {
   }
   ,[board])
 
-  useEffect(() => {
-      new Audio(bgm[info.theme]).play();
-  },[])
 
   const placePiece = (event) => {
 

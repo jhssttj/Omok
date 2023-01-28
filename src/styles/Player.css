@@ -29,21 +29,6 @@
   height:100%;
 }
 
-.mute {
-  background-color: rgb(236, 128, 27, 0.9);
-  color: white;
-  border-radius: 25px;
-  margin-right: 1%;
-  border: none;
-  height:90%;
-}
-
-.mute:hover {
-  font-weight: bold;
-  color: black;
-}
-
-
 .BottomBar {
   display: flex;
   flex-direction: row;
