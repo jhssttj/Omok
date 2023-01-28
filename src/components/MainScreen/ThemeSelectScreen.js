@@ -2,18 +2,25 @@ import React from 'react';
 import {useState} from 'react';
 import {themes} from './PlayerData';
 import { FaRegArrowAltCircleLeft,FaRegArrowAltCircleRight } from "react-icons/fa";
+import { soundEffects } from './SoundData';
 
 function ThemeSelectScreen(props) {
   
   const currentT=props.currentT;
   const setCurrentT=props.setCurrentT;
 
+  const clickSound = () => {
+    new Audio(soundEffects.click).play()
+  } 
   //Function to change between pieces
   const nextPiece = () => {
     setCurrentT(currentT===themes.length-1?0:currentT+1);
+    clickSound();
+
   }
   const prevPiece = () => {
     setCurrentT(currentT===0?themes.length-1:currentT-1);
+    clickSound();
   }
 
 

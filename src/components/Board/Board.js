@@ -8,6 +8,7 @@ import{pieces} from '../MainScreen/PlayerData';
 import{sprites} from '../MainScreen/PlayerData';
 import { WinnerScreen } from '../MainScreen/WinnerScreen';
 import { DrawScreen } from '../MainScreen/DrawScreen';
+import { soundEffects } from '../MainScreen/SoundData';
 
 function Board(props) {
   //Set props as constant
@@ -26,6 +27,16 @@ function Board(props) {
     s1: sprites[info.s1],
     s2: sprites[info.s2]
   }
+  //Make sound function
+  const placeSound = () => {
+    new Audio(soundEffects.place).play();
+  }
+  const winSound = () => {
+    new Audio(soundEffects.win).play();
+  }
+  const drawSound = () => {
+    new Audio(soundEffects.draw).play();
+  }
   //Set Winner/Draw Render
   const [winner, setWinner] = useState(false);
   const [draw, setDraw] = useState(false);
@@ -37,10 +48,12 @@ function Board(props) {
       player===1
         ?setWinner(["Player 1",sprite.s1])
         :setWinner(["Player 2",sprite.s2])
+      winSound();  
       setOver(true);  
     }
     if(checkDraw(board)) {
       setDraw(true);
+      drawSound();
       setOver(true);  
     }
 
@@ -65,6 +78,7 @@ function Board(props) {
     setBoard(() => {
       return updateBoard(board,player,x,y)
     })
+    placeSound();
   };
   
 

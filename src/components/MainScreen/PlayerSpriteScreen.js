@@ -1,18 +1,26 @@
 import React from 'react';
 import {sprites} from './PlayerData';
 import { FaRegArrowAltCircleLeft,FaRegArrowAltCircleRight } from "react-icons/fa";
+import { soundEffects } from './SoundData';
+
 
 function PlayerSpriteScreen(props) {
 
   const currentS=props.currentS;
   const setCurrentS=props.setCurrentS;
 
+  const clickSound = () => {
+    new Audio(soundEffects.click).play();
+  } 
+
   //Function to change between pieces
   const nextPiece = () => {
     setCurrentS(currentS===sprites.length-1?0:currentS+1);
+    clickSound();
   }
   const prevPiece = () => {
     setCurrentS(currentS===0?sprites.length-1:currentS-1);
+    clickSound();
   }
 
 

@@ -9,6 +9,7 @@ import {ThemeScreen} from './ThemeScreen';
 import {TopBar} from './TopBar';
 import {BottomBar} from './BottomBar';
 import Board from '../Board/Board';
+import { soundEffects } from './SoundData';
 
 function MainScreen() {
 
@@ -31,6 +32,11 @@ function MainScreen() {
     s2: currentS2,
   }
 
+  //Bring start music
+  const startSound = () => {
+    new Audio(soundEffects.start).play();
+  }
+
   //Start game condition
   const [start, setStart] =useState(false);
   const [error, setError] = useState(false)
@@ -40,7 +46,8 @@ function MainScreen() {
       setError(true);
       return;
     }
-    setStart(true)
+    setStart(true);
+    startSound();
   }
 
   return (  
