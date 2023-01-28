@@ -6,8 +6,11 @@ function TopBar() {
 
   return (  
     <div className="TopBar">
-      <img className="logo" src={logo} alt="logo"/>
-      <p className="topText">Maplestory Omok</p>
+      <div className="title">
+        <img className="logo" src={logo} alt="logo"/>
+        <p className="topText">Maplestory Omok</p>
+      </div>
+      <button className="mute">Mute</button>
     </div>
   );
 }
