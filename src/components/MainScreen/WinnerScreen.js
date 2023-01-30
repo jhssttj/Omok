@@ -1,6 +1,4 @@
 import React from 'react';
-import {PlayerPieceScreen} from './PlayerPieceScreen';
-import {PlayerSpriteScreen} from './PlayerSpriteScreen';
 import '../../styles/Player.css';
 
 function WinnerScreen(props) {
