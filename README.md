@@ -5,6 +5,8 @@ The project takes heavy inspiration from the game Maplestory.
 Players are offered customization for their pieces, avatar/character and the theme of the board.
 All sprites, images and sound used for this project belongs to © Nexon and was used under fair use.
 
+The game can be played [here](msomok.netlify.app)
+
 ## Setting Up
 
 1. Clone this repository onto your local device.
