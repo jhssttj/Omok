@@ -1,5 +1,5 @@
 import React from 'react';
-import {useState, useEffect} from 'react';
+import {useState} from 'react';
 import {player1,player2} from './PlayerData';
 import {themes} from './PlayerData';
 import themeMain from '../../images/background/mainScreen.png'
